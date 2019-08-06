@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block nav %}
+Pas d'accueil
+{% endblock %}
+
+{% block title %}Details du produit {{ product.name }}{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="example-wrapper">
+    <h1>Détails du produit  {{ product.name }}!</h1>
+    <img src="{{ product.image }}" alt="">
+    <h2>Description</h2>
+    <p>{{ product.description }}</p>
+    <p>Créé le {{ product.creationDate|date('d/m/Y')}}</p>
+    <a href="{{ path( 'home' ) }}">Revenir à l'Accueil</a>
+
+</div>
+{% endblock %}
